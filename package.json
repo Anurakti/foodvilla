@@ -5,9 +5,9 @@
   "description": "",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "start": "parcel index.html",
-    "build": "parcel build index.html --public-url /foodvilla",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "keywords": [],
