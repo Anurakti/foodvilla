@@ -3,7 +3,7 @@ import { clearCart } from "../utils/cartSlice"
 import FoodItem from "./FoodItem"
 
 const Cart = () => {
-    // const store = useSelector((store)=>store)
+    const store = useSelector((store)=>store)
     // why we avoid above method and don't subscribe full store because whenever anything in the store changes---
     // our cart component is re rendered again and there is huge performance loss because pf multiple re renders 
 

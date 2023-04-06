@@ -15,6 +15,7 @@ const RestaurantMenu = () => {
     const dispatch = useDispatch()
 
     const addFoodItem =(item)=>{
+        // console.log("item", item)
         dispatch(addItem(item))
     }
 
@@ -34,7 +35,7 @@ const RestaurantMenu = () => {
                 <ul>
                     {restaurantMenu.map((element)=>(
                         <li key={element?.card?.info?.id}>
-                            {element?.card?.info?.name} - <button className="p-1 bg-green-50" onClick={()=>addFoodItem(item = element.card.info)}>Add</button>
+                            {element?.card?.info?.name} - <button className="p-1 bg-green-50" onClick={()=>addFoodItem(element.card.info)}>Add</button>
                         </li>
                     ))}
                 </ul>
