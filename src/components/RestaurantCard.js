@@ -13,7 +13,7 @@ const RestaurantCard = ({cloudinaryImageId, name, cuisines, avgRating}) => {
             <h2 className="font-bold">{name} </h2>
             <h3 className="font-light from-slate-500">{cuisines.join(", ")} </h3>
             <h4 className="font-bold">{avgRating}⭑⭑⭑ </h4>
-            {/* <h5>{user.name}-{user.email}</h5> */}
+            {/* <h5>{user.nae}-{user.email}</h5> */}
             
         </div>
     )
