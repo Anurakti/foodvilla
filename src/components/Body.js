@@ -24,8 +24,14 @@ const Body = () => {
     );
     const json = await data.json();
     // console.log(json)
-    setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards); //optional chaining
-    setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    // setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards); //optional chaining
+    // setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    setAllRestaurants(
+      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setFilteredRestaurants(
+      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   }
 
   const isOnline = useOnline();
@@ -80,10 +86,13 @@ const Body = () => {
             return (
               <Link
                 className="link"
-                to={`/restaurant/${restaurant.data.id}`}
-                key={restaurant.data.id}
+                // to={`/restaurant/${restaurant.data.id}`}
+                // key={restaurant.data.id}
+                key={restaurant?.info.id}
+                to={"/restaurants/" + restaurant?.info.id}
               >
-                <RestaurantCard {...restaurant.data} />
+                {/* <RestaurantCard {...restaurant.data} /> */}
+                <RestaurantCard resData={restaurant?.info} />
               </Link>
             );
           })
