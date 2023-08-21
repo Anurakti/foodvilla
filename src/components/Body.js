@@ -23,14 +23,14 @@ const Body = () => {
       "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    // console.log(json)
+    // console.log(json);
     // setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards); //optional chaining
     // setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
     setAllRestaurants(
-      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestaurants(
-      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   }
 
