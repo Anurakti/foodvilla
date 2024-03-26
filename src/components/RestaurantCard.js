@@ -10,7 +10,10 @@ const RestaurantCard = (props) => {
       <img src={IMG_CDN_URL + cloudinaryImageId} />
       <h2 className="font-bold">{name} </h2>
       <h3 className="font-light from-slate-500">{cuisines.join(", ")} </h3>
-      <h4 className="font-bold">{avgRating}⭑⭑⭑ </h4>
+      <h4 className="font-bold">
+        {avgRating}
+        {avgRating > 4 ? "⭑⭑⭑⭑" : "⭑⭑⭑"}{" "}
+      </h4>
       {/* <h5>{user.nae}-{user.email}</h5> */}
     </div>
   );

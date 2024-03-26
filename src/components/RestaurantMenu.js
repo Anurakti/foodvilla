@@ -27,7 +27,7 @@ const RestaurantMenu = () => {
   ) : (
     <div className="flex space-x-5">
       <div>
-        <h1>Restaurant Id: {params.id} </h1>
+        {/* <h1>Restaurant Id: {params.id} </h1> */}
         <h2 className="font-bold">{restaurant.name} </h2>
         <img
           style={{ width: "200px", height: "120px", border: "1px black solid" }}

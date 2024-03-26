@@ -27,10 +27,10 @@ const Body = () => {
     // setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards); //optional chaining
     // setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
     setAllRestaurants(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestaurants(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   }
 

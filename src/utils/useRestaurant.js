@@ -13,11 +13,12 @@ const useRestaurant = (resId) => {
     const data = await fetch(FETCH_MENU_URL + resId);
     const json = await data.json();
 
-    setRestaurant(json?.data?.cards[0]?.card?.card?.info);
+    setRestaurant(json?.data?.cards[2]?.card?.card?.info);
     setRestaurantMenu(
-      json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
+      json?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
         ?.card?.itemCards
     );
+    console.log(json?.data);
   }
 
   return [restaurant, restaurantMenu]; //to return 2 things at a time we have to use data structure like array or object
